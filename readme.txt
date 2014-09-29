@@ -5,7 +5,7 @@ License: GPLv2
 Requires at least: 2.7
 Tested up to: 3.5
 Stable tag: 1.2.1
-
+Author: selnomeria
 Safely cleans & prevents unnecessary, needless data from Wordpress.  Removes AUTO-SAVES and AUTO-DRAFTED revision,useless posts from database. VERY simple and lightweight plugin. See description.
 
 
