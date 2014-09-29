@@ -1,4 +1,4 @@
-=== Clean surplus ===
+=== Clean Surpluss ===
 Contributors: boliquan
 Tags: clean, surplus, disable auto-draft,revision, database
 License: GPLv2
