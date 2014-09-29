@@ -1,24 +1,21 @@
-=== Prevent surplus records in DB ===
+=== Clean surplus ===
 Contributors: boliquan
-Tags: clean,surplus, disable auto-draft,revision
+Tags: clean, surplus, disable auto-draft,revision, database
 License: GPLv2
 Requires at least: 2.7
 Tested up to: 3.5
 Stable tag: 1.2.1
 
-Safely cleans & prevents unnecessary, needless data from Wordpress. (DISABLE AUTO-DRAFT, REVISION and etc..).  VERY simple and lightweight plugin. See details.
+Safely cleans & prevents unnecessary, needless data from Wordpress.  Removes AUTO-SAVES and AUTO-DRAFTED revision,useless posts from database. VERY simple and lightweight plugin. See description.
 
 
 == Description ==
 
-After plugin activation, read more details at  "Dashboard"->"Settings"->"Clean surplus",where you can clean up the wordpress database.
+After plugin activation, enter menu under "Dashboard"->"Settings".
 
 
 = Usage =
 
-1. Download and extract archive to `wp-content/plugins/`
-2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. "Dashboard"->"Settings"->"Clean Surplus"
 
 Related Links:
 
@@ -28,7 +25,7 @@ Related Links:
 
 1. Download and extract archive to `wp-content/plugins/`
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. "Dashboard"->"Settings"->"Clean Surplus"
+3. You will have menu under "Dashboard"->"Settings"
 
 == Changelog ==
 
