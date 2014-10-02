@@ -1,6 +1,5 @@
-=== Clean Surpluss ===
-Contributors: selnomeria, boliquan
-Author: selnomeria
+=== Clean Surpluss (junk database data)===
+contributors: selnomeria
 Tags: clean, surplus, disable auto-draft,revision, database
 Requires at least: 3.0
 Tested up to: 3.9
@@ -8,11 +7,8 @@ Stable tag: 1.0.1
 License: GPLv2
 
 
-
-Safely cleans & prevents unnecessary, needless data from Wordpress.  Removes AUTO-SAVES and AUTO-DRAFTED revision,useless posts from database. VERY simple and lightweight plugin. See description.
-
-
 == Description ==
+Safely cleans & prevents unnecessary, needless data from Wordpress.  Removes AUTO-SAVES and AUTO-DRAFTED revision,useless posts from database. VERY simple and lightweight plugin. See description.
 
 After plugin activation, enter menu under "Dashboard"->"Settings".
 
