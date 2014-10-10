@@ -45,9 +45,17 @@ if (is_admin())
 {
 
 	// ------------------------- ADD PAGE IN SETTINGS menu ---------------------------
-	add_action('admin_menu', 'cln_pg_clb');function cln_pg_clb() { add_submenu_page('options-general.php', 'Clean USELESS data', 'Clean USELESS data', 'manage_options', 'cln-db', 'cleanspr_func' ); 
+	add_action('admin_menu', 'cln_pg_clb');function cln_pg_clb() { add_submenu_page('options-general.php', 'Clean Surplus', 'Clean Surplus', 'manage_options', 'cln-db', 'cleanspr_func' ); 
 	}
 
+	function validate_pageload($value, $action_name)
+	{
+		if ( 	!isset($value) || !wp_verify_nonce($value, $action_name) ) {
+			die("not allowed due to internal_error_151");
+		}
+	}	
+	
+	
 	function cleanspr_func() 
 	{
 		global $wpdb;
@@ -56,7 +64,10 @@ if (is_admin())
 		if (isset($_GET['perform_clean'])) { cleendb(); }
 		
 		//When settings are UPDATED
-		if (isset($_POST['makeee_upd'])){
+		if (isset($_POST['makeee_upd']))
+		{
+			validate_pageload($_POST['makeee_upd'],'csp_upd');
+			
 			update_option('cleandb_1',$_POST['c1']);	update_option('cleandb_2',$_POST['c2']);		update_option('cleandb_3',$_POST['c3']);
 			update_option('cleandb_4',$_POST['c4']);	update_option('cleandb_5',$_POST['c5']);		update_option('cleandb_6',$_POST['c6']);
 			update_option('cleandb_7',$_POST['c7']);	update_option('cleandb_8',$_POST['c8']);
@@ -123,7 +134,7 @@ if (is_admin())
 			enable AUTO-PERFORM CLEAN once in a day <input type="hidden" name="enabl_autoclen" value="n" checked /><input type="checkbox" name="enabl_autoclen" <?php if (get_option('db_enable_auto_clean')=='y') {echo 'checked';} ?> />
 			</p>
 			
-			<br/><input type="submit" value="SAVE" /> <input type="hidden" name="makeee_upd" value="y" /> 
+			<br/><input type="submit" value="SAVE" /> <input type="hidden" name="makeee_upd" value="<?php echo wp_create_nonce('csp_upd');?>" /> 
 			</form>
 			<p class="notesss"> NOTE: The plugin can clean AUTO-DRAFT, REVISION posts(in most cases,they are intended for just a one-time use, and after it, they are kept in database with no reason) and some other extra,unnecessary, useless data ( In most cases, all of the above fields are surplus, unnecessary and old records,auto-saved suggestions,ADs and etc...). If you are experienced programmer, then you can investigate each field's definition in google, and will see what they do. However, if you are unsure, you can download mysql backup to your pc before cleaning. There exists good plugins for backup/restore databases. 
 			<br/> (p.s. Although there exists another better plugin, called "WP-Clean", I made this current plugin("Clean surplus") for quick usage.)</p>
@@ -137,7 +148,8 @@ if (is_admin())
 	} // END PLUGIN PAGE
 	
 	
-	if ( get_option('db_enable_auto_clean')=='y' && (get_option('db_last_auto_cnl') < time()- 86400) )  
+	// auto-clean in 7 days
+	if ( get_option('db_enable_auto_clean')=='y' && (get_option('db_last_auto_cnl') < time()- 7*24*60*60) )  
 	{
 		cleendb();
 		update_option('db_last_auto_cnl',time());
