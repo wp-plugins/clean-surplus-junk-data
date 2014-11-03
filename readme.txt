@@ -6,11 +6,11 @@ Tested up to: 3.9
 Stable tag: 1.0.1
 License: GPLv2
 
+Safely clean up junk data. 
 
 == Description ==
-Safely cleans & prevents unnecessary, needless data from Wordpress.  Removes AUTO-SAVES and AUTO-DRAFTED revision,useless posts from database. VERY simple and lightweight plugin. See description.
+Safely cleans & prevents unnecessary, needless data from Wordpress.  Removes AUTO-SAVES and AUTO-DRAFTED revisions,useless posts from database. VERY lightweight plugin,see description under Settings. (OTHER MUST-HAVE PLUGINS : http://codesphpjs.blogspot.com/2014/10/must-have-wordpress-plugins.html )
 
-After plugin activation, enter menu under "Dashboard"->"Settings".
 
 
 = Usage =
