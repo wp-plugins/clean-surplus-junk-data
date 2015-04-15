@@ -9,7 +9,7 @@ License: GPLv2
 Safely clean up junk data. 
 
 == Description ==
-Safely cleans & prevents unnecessary, needless data from Wordpress.  Removes AUTO-SAVES and AUTO-DRAFTED revisions,useless posts from database. VERY lightweight plugin,see description under Settings. (OTHER MUST-HAVE PLUGINS : http://codesphpjs.blogspot.com/2014/10/must-have-wordpress-plugins.html )
+Safely cleans & prevents unnecessary, needless data from Wordpress.  Removes AUTO-SAVES and AUTO-DRAFTED revisions,useless posts from database. VERY lightweight plugin,see description under Settings. (P.S.  OTHER MUST-HAVE PLUGINS FOR EVERYONE: http://bitly.com/MWPLUGINS  )
 
 
 

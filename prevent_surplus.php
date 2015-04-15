@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Clean Surpluss (junk database data)
-Description: Safely cleans & prevents unnecessary, needless data from Wordpress.  Removes AUTO-SAVES and AUTO-DRAFTED revisions,useless posts from database. VERY lightweight plugin,see description under Settings. (OTHER MUST-HAVE PLUGINS : http://codesphpjs.blogspot.com/2014/10/must-have-wordpress-plugins.html )
+Description: Safely cleans & prevents unnecessary, needless data from Wordpress.  Removes AUTO-SAVES and AUTO-DRAFTED revisions,useless posts from database. VERY lightweight plugin,see description under Settings. (P.S.  OTHER MUST-HAVE PLUGINS FOR EVERYONE: http://bitly.com/MWPLUGINS  )
 Version: 1.0.1
 Author: selnomeria
 Other authors: Multiple Authors
