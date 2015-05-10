@@ -6,7 +6,7 @@ Version: 1.0.1
 Author: selnomeria
 Other authors: Multiple Authors
  */
-
+if ( ! defined( 'ABSPATH' ) ) exit; //Exit if accessed directly
 
 // --------------- MAIN FUNCTION --------------
 		//--------------------disable AUTOSAVE and REVISIONS----------------------
@@ -14,9 +14,11 @@ Other authors: Multiple Authors
 		//define('WP_POST_REVISIONS', false);
 		//add_action( 'wp_print_scripts', 'disable_autosave' );
 		//function disable_autosave() { wp_deregister_script('autosave'); }
+add_action( 'activated_plugin', 'activat_redirect__csjdd' ); function activat_redirect__csjdd( $plugin ) { 
+    if( $plugin == plugin_basename( __FILE__ ) ) {  exit(wp_redirect( admin_url( 'admin.php?page=cln-db')) );  }
+}		
 		
-		
-function cleendb()
+function cleendb_cmli()
 {
 	global $wpdb;
 	if (get_option('cleandb_1')=='y')
@@ -61,7 +63,7 @@ if (is_admin())
 		global $wpdb;
 		
 		//if user clicked "Perform Clean"
-		if (isset($_GET['perform_clean'])) { cleendb(); }
+		if (isset($_GET['perform_clean'])) { cleendb_cmli(); }
 		
 		//When settings are UPDATED
 		if (isset($_POST['makeee_upd']))
@@ -151,7 +153,7 @@ if (is_admin())
 	// auto-clean in 7 days
 	if ( get_option('db_enable_auto_clean')=='y' && (get_option('db_last_auto_cnl') < time()- 7*24*60*60) )  
 	{
-		cleendb();
+		cleendb_cmli();
 		update_option('db_last_auto_cnl',time());
 	}
 } //end IF_ADMIN
